@@ -9,23 +9,30 @@ void solve(){
     ll i;
     ll odd=0;
     ll even=0;
-    ll laxtodd=0;
-    ll laxteven=0;
     for(i=0;i<n;i++){
         cin>>a[i];
         if(a[i]%2!=0){
             odd++;
-            laxtodd=i+1;
         }
         else{
             even++;
-            laxteven=i+1;
         }
     }
-    if(odd==1)
-    cout<<laxtodd<<endl;
-    else
-    cout<<laxteven<<endl;
+    if(odd==1){
+        for(i=0;i<n;i++){
+        if(a[i]%2!=0){
+            break;
+        }
+    }
+    }
+    else{
+        for(i=0;i<n;i++){
+        if(a[i]%2==0){
+            break;
+        }
+    }
+    }
+    cout<<i+1<<endl;
 }
 int main() {
     ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);
