@@ -2,40 +2,26 @@
 #define ll long long
 #define MOD 1000000007 
 using namespace std;
-template<typename T>
-class Graph{
-    public:
-   map<T,T> l;
-   
-   void addedge(T u,T v){
-    	l[u]=v;    
+bool dfs(ll* a,ll n,ll src,ll t){
+    if(src==t){
+        return true;
     }
-   bool dfs_helper(T src,ll t){
-       if(src==t){
-           return true;
-       }
-       if(src>t){
-           return false;
-       }
-       return dfs_helper(src+l[src],t);
-   }
-   void dfs(T src,ll t){
-         if(dfs_helper(src,t))
-         cout<<"YES"<<endl;
-         else
-         cout<<"NO"<<endl;
-   }
-};
+    if(src>t){
+        return false;
+    }
+    return dfs(a,n,src+a[src],t);
+}
 void solve(){
   ll n,t;
   cin>>n>>t;
-  ll a;
-  Graph<ll> g;
-  for(ll i=1;i<=n-1;i++){
-      cin>>a;
-      g.addedge(i,a);
+  ll a[n+1];
+  for(ll i=1;i<=n;i++){
+      cin>>a[i];
   }
-  g.dfs(1,t);
+  if(dfs(a,n,1,t))
+  cout<<"YES"<<endl;
+  else
+  cout<<"NO"<<endl;
 }
 int main() {
     ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);
