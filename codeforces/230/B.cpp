@@ -19,7 +19,7 @@ bool isprime(ll n){
     }
     return true;
 }
-bool persq(ll n){
+bool ps(ll n){
     long double sq=sqrt(n);
     if(sq==floor(sq)){
         return true;
@@ -31,7 +31,7 @@ bool persq(ll n){
 void solve(){
     ll n;
     cin>>n;
-    if(persq(n)&&isprime(sqrt(n))){
+    if(ps(n)&&isprime(sqrt(n))){
         cout<<"YES"<<endl;
     }
     else{
