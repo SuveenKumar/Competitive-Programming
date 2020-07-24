@@ -1,35 +1,36 @@
 #include <bits/stdc++.h>
 #define ll long long
-#define MOD 1000000007 
 using namespace std;
-int main() {
-    ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);
+void solve(){
     ll n;
     cin>>n;
-    int deno[5]={1,5,10,20,100};
-    ll count=0;
+    ll cnt=0;
     while(n>0){
         if(n>=100){
-            count++;
+            cnt++;
             n-=100;
         }
-        else if(n>=20 && n<100){
-            count++;
+        else if(n>=20){
+            cnt++;
             n-=20;
         }
-        else if(n>=10 && n<20){
-            count++;
+        else if(n>=10){
+            cnt++;
             n-=10;
         }
-        else if(n>=5 && n<10){
-            count++;
+        else if(n>=5){
+            cnt++;
             n-=5;
         }
         else{
-           count++;
-           n--;
+            cnt++;
+            n--;
         }
     }
-    cout<<count<<endl;
+    cout<<cnt<<endl;
+}
+int main() {
+    ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);
+    solve();
     return 0;
 }
