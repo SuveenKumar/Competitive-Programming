@@ -1376,6 +1376,21 @@
     ],
     "timestamp": "Jan/30/2021 20:52"
   },
+  "CF88184243": {
+    "contest_id": 690,
+    "language": "GNU C++17",
+    "path": "codeforces\\690\\D1.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D1",
+    "problem_name": "The Wall (easy)",
+    "problem_url": "https://codeforces.com/contest/690/problem/D1",
+    "submission_id": "CF88184243",
+    "submission_url": "https://codeforces.com/contest/690/submission/88184243",
+    "tags": [
+      "*1200"
+    ],
+    "timestamp": "Jul/28/2020 13:39"
+  },
   "CF88286219": {
     "contest_id": 520,
     "language": "GNU C++17",
