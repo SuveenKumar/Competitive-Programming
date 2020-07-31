@@ -6,28 +6,22 @@ void solve(){
    ll n;
    cin>>n;
    ll a[n];
-   ll dp[5001]={0};
    for(ll i=0;i<n;i++){
       cin>>a[i];
-      dp[a[i]]++;
    }
    sort(a,a+n);
-   ll ans=MOD;
-   for(ll i=1;i<=5000;i++){
-       ll cntl=0;
-       ll cntr=0;
-       if(dp[i]!=0){
-       for(ll j=1;j<i;j++){
-             cntl+=dp[j]; 
-       } 
-       for(ll j=(2*i)+1;j<=5000;j++){
-             cntr+=dp[j]; 
-       }
-       //cout<<i<<" "<<dp[i]<<" "<<cntl<<" "<<cntr<<endl;
-       ans=min(ans,cntl+cntr);
+   if(((double)a[n-1]/a[0])<=2){
+        cout<<0<<endl;     
    }
- }
-   cout<<ans<<endl;
+   else{
+       ll ans=MOD;
+       for(ll i=-1;i<n;i++){
+          ll x=upper_bound(a,a+n,2*(a[i+1]))-a;
+          ans=min(ans,i+1+n-x);
+       }
+       cout<<ans<<endl;
+   }
+   
 }
 int main() {
     freopen("input.txt","rt", stdin);
