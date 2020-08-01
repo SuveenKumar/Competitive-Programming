@@ -1,38 +1,39 @@
 #include <bits/stdc++.h>
-#define ll long long
-#define MOD 1000000007 
 using namespace std;
-void solve(){
-    ll n;
-    cin>>n;
-    vector<ll> v;
-    ll minodd=MOD;
-    ll minnegodd=-MOD;
-    ll sum=0;
-    for(ll i=0;i<n;i++){
-        ll num;
-        cin>>num;
-        if(num>0){
-           sum+=num;
+#define SPEED ios::sync_with_stdio(false); cin.tie(0); cout.tie(0)
+#define int long long
+#define ld long double
+#define fi first
+#define se second
+#define all(uiet) uiet.begin(),uiet.end()
+#define mp make_pair
+#define pb push_back
+#define eb emplace_back
+#define vpp vector<pair< int, int > >
+#define pll pair<int , int >
+#define ppll pair < pll , pll >
+#define mod 1000000007
+const int INF=(1LL<<60)-1;
+
+int32_t main(){
+    SPEED;
+    int n;
+    cin >> n;
+    int arr[n];
+    int ans = 0;
+    int oddmin = INF, oddmax = -INF;
+    for(int i = 0; i < n; ++i){
+        cin >> arr[i];
+        if(arr[i] & 1) {
+            if(arr[i] > 0){
+                oddmin = min(oddmin, arr[i]);
+            }
+            else{
+                oddmax = max(oddmax, arr[i]);
+            }
         }
-        if(num%2!=0){
-            if(num<0)minnegodd=max(num,minnegodd);
-            else minodd=min(num,minodd);
-        }
+        if(arr[i] > 0) ans += arr[i];
     }
-    if(sum%2!=0)cout<<sum<<endl;
-    else{
-        if(abs(minnegodd)<minodd)sum=sum-abs(minnegodd);
-        else sum=sum-minodd;
-        cout<<sum<<endl;
-    }
-}
-int main() {
-#ifndef ONLINE_JUDGE
-    freopen("input.txt","r", stdin);
-    freopen("output.txt","w", stdout);
-#endif
-    ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);
-    solve();
-    return 0;
+    if(ans & 1) cout << ans ;
+    else cout << ans - min(abs(oddmin), abs(oddmax));
 }
