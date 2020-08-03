@@ -1376,6 +1376,24 @@
     ],
     "timestamp": "Jan/30/2021 20:52"
   },
+  "CF88798748": {
+    "contest_id": 166,
+    "language": "GNU C++17",
+    "path": "codeforces\\166\\E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Tetrahedron",
+    "problem_url": "https://codeforces.com/contest/166/problem/E",
+    "submission_id": "CF88798748",
+    "submission_url": "https://codeforces.com/contest/166/submission/88798748",
+    "tags": [
+      "dp",
+      "math",
+      "matrices",
+      "*1500"
+    ],
+    "timestamp": "Aug/03/2020 18:09"
+  },
   "CF88802886": {
     "contest_id": 891,
     "language": "GNU C++17",
