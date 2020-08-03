@@ -7,8 +7,8 @@ void solve(){
     cin>>n;
     vector<ll> dp(n+1,0);
     for(ll i=2;i<=n;i++){
-        if(i%2==0)dp[i]=(dp[i-1]*3+3)%MOD;
-        else dp[i]=(dp[i-1]*3-3)%MOD;
+        if(i%2==0)dp[i]=((dp[i-1]+1)*3)%MOD;
+        else dp[i]=((dp[i-1]-1)*3)%MOD;
     }
     cout<<dp[n]<<endl;
 }
