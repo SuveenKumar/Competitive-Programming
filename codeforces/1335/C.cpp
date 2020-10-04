@@ -1,0 +1,59 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define endl ("\n")
+#define pi (3.141592653589)
+#define mod 1000000007
+#define INF 1000000009
+#define float double
+#define pb push_back
+#define mp make_pair
+#define ff first
+#define ss second
+#define so sizeof 
+#define pii pair<ll,ll>
+#define all(c) c.begin(), c.end()
+#define min3(a, b, c) min(c, min(a, b))
+#define min4(a, b, c, d) min(d, min(c, min(a, b)))
+#define max3(a, b, c) max(c, max(a, b))
+#define max4(a, b, c, d) max(d, max(c, max(a, b)))
+#define repe(i,a) for(auto i:a)
+#define st string
+#define rep(i,a,b) for(ll i=a;i<=b;i++)
+#define rrep(i,a,b) for(ll i=b;i>=a;i--)
+#define fast ios_base::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr); 
+void solve(){
+  ll n;
+  cin>>n;
+  ll a[n];
+  rep(i,0,n-1){
+    cin>>a[i];    
+  }
+  map<ll,ll> freq;
+ // memset(freq,0,so(freq));
+  rep(i,0,n-1){
+    freq[a[i]]++;
+  }
+  ll diff=0;
+  ll same=0;
+  repe(i,freq){
+     if(i.ss!=0){
+      diff++;
+     }
+     same=max(same,i.ss);
+  }
+  diff--;
+  cout<<max(min(diff,same),min(same-1,diff+1))<<endl;
+}
+int main() {
+#ifndef ONLINE_JUDGE
+    freopen("input.txt","r", stdin);
+    freopen("output.txt","w", stdout);
+#endif
+    fast
+    ll t;
+    cin>>t;
+    while(t--)
+    solve();
+    return 0;
+}
