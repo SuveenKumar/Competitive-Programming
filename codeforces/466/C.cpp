@@ -33,26 +33,35 @@ void solve(){
     cin>>arr[i];
     sum+=arr[i];
   }
-  if(sum%3!=0){
-     cout<<0<<endl;
-     return;
+  if(sum%3!=0 || n<3){
+    cout<<0<<endl;
+    return;
   }
-  sum=sum/3;
-  ps[0]=arr[0];
-  rep(i,1,n){
-    ps[i]=arr[i]+ps[i-1];
+  else{
+    sum/=3;
+  }
+  ll dp[n];
+  ll s=0;
+  rrep(i,0,n){
+    s+=arr[i];
+    if(s==sum)
+    dp[i]=1;
+  else
+    dp[i]=0;
+  }
+  ps[n-1]=dp[n-1];
+  rrep(i,0,n-1){
+      ps[i]=ps[i+1]+dp[i];
   }
   ll x=0;
-  ll y=0;
-  rep(i,0,n-1){
-    if(ps[i]==2*sum){
-      y+=x;
-    }
-    if(ps[i]==sum){
-      x++;
+  ll cnt=0;
+  rep(i,0,n-2){
+    x+=arr[i];
+    if(x==sum){
+      cnt+=ps[i+2];
     }
   }
-  cout<<y<<endl;
+  cout<<cnt<<endl;
 }
 int main() {
 #ifndef ONLINE_JUDGE
