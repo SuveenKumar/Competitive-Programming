@@ -1,4 +1,21 @@
 {
+  "CF101827089": {
+    "contest_id": 6,
+    "language": "GNU C++17",
+    "path": "codeforces\\6\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Alice, Bob and Chocolate",
+    "problem_url": "https://codeforces.com/contest/6/problem/C",
+    "submission_id": "CF101827089",
+    "submission_url": "https://codeforces.com/contest/6/submission/101827089",
+    "tags": [
+      "greedy",
+      "two pointers",
+      "*1200"
+    ],
+    "timestamp": "Dec/20/2020 13:02"
+  },
   "CF101828320": {
     "contest_id": 50,
     "language": "GNU C++17",
