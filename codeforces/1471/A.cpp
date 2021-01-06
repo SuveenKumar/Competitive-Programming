@@ -27,10 +27,12 @@
       ll n,x;
       cin>>n>>x;
       ll a[n];
+      ll ans=0;
      rep(i,0,n){
       cin>>a[i];
+      ans+=a[i];
      }
-     ll ans=accumulate(a,a+n,0LL);
+     //ll ans=accumulate(a,a+n,0);
    ll min=0;
    ll max=0;
    min=ceil((double)ans/x);
