@@ -495,6 +495,23 @@
     ],
     "timestamp": "Jan/23/2021 18:47"
   },
+  "CF103664820": {
+    "contest_id": 245,
+    "language": "GNU C++17",
+    "path": "codeforces\\245\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Internet Address",
+    "problem_url": "https://codeforces.com/contest/245/problem/B",
+    "submission_id": "CF103664820",
+    "submission_url": "https://codeforces.com/contest/245/submission/103664820",
+    "tags": [
+      "implementation",
+      "strings",
+      "*1100"
+    ],
+    "timestamp": "Jan/08/2021 00:38"
+  },
   "CF103814661": {
     "contest_id": 1467,
     "language": "GNU C++17",
