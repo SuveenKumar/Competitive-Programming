@@ -495,6 +495,24 @@
     ],
     "timestamp": "Jan/23/2021 18:47"
   },
+  "CF103659703": {
+    "contest_id": 1471,
+    "language": "GNU C++17",
+    "path": "codeforces\\1471\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Strange Birthday Party",
+    "problem_url": "https://codeforces.com/contest/1471/problem/C",
+    "submission_id": "CF103659703",
+    "submission_url": "https://codeforces.com/contest/1471/submission/103659703",
+    "tags": [
+      "brute force",
+      "greedy",
+      "sortings",
+      "*1300"
+    ],
+    "timestamp": "Jan/07/2021 23:22"
+  },
   "CF103662421": {
     "contest_id": 1149,
     "language": "GNU C++17",

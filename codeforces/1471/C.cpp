@@ -24,6 +24,7 @@
   #define rrep(i,a,b) for(ll i=b-1;i>=a;i--)
   #define fast ios_base::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
   void solve(){
+      
     ll n,m;
     cin>>n>>m;
     ll a[n],b[m];
@@ -63,6 +64,7 @@
           freopen("output.txt","w", stdout);
   #endif
           fast
+          // a4a7b0ef7c6fcd4b233f156b9f969ca8df0d82e06d1ec81cbacfb681b7708c4e
           ll t;
           cin>>t;
           while(t--)
